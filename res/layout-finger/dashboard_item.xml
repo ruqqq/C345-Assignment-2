@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This root LinearLayout is ignored when we inflate the layout -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:id="@+id/llItemHeading"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:gravity="center">
+		<ImageView
+			android:id="@+id/ivIcon"
+			android:layout_width="72dp"
+			android:layout_height="72dp"
+			android:scaleType="centerInside" />
+		<TextView
+			android:id="@+id/tvName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="2dp"
+			android:textSize="14sp"
+			android:shadowRadius="1"
+			android:shadowDx="2"
+			android:shadowDy="2"
+			android:duplicateParentState="false"
+			android:ellipsize="marquee"
+			android:singleLine="true"
+			android:gravity="center_horizontal" />
+	</LinearLayout>
+</LinearLayout>

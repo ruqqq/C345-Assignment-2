@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical">
+    <LinearLayout
+    	android:id="@+id/titlebar"
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="45dp"
+    	android:padding="8dp"
+    	android:gravity="center">
+    	<TextView
+    		android:text="@string/app_name"
+    		android:id="@+id/app_title"
+    		android:layout_width="wrap_content"
+    		android:layout_height="fill_parent"
+    		android:layout_gravity="center|center_vertical"
+    		style="@style/Titlebar.Large" />
+    </LinearLayout>
+    <GridView
+		android:id="@+id/gvDashboard"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="10dp"
+		android:numColumns="auto_fit"
+		android:verticalSpacing="10dp"
+		android:horizontalSpacing="10dp"
+		android:columnWidth="128dp"
+		android:stretchMode="columnWidth" />
+	<include layout="@layout/nowplaying" />
+	</LinearLayout>
+</LinearLayout>

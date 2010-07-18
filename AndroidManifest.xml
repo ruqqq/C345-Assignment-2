@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="sg.ruqqq.socialtunes"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".DashboardActivity"
+        		  android:launchMode="singleTop"
+        		  android:alwaysRetainTaskState="true"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Black.NoTitleBar"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+		<activity android:name="TrendsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+    			  
+    	<activity android:name="SongLocationsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+    	<activity android:name="SongsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+    			  
+    	<activity android:name="ArtistsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+    			  		  
+    	<activity android:name="AlbumsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+    			  
+    	<activity android:name="PlaylistsActivity"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar" />
+    			  
+    	<activity android:name="MediaPlayerActivity"
+    			  android:launchMode="singleTask"
+    			  android:theme="@android:style/Theme.Black.NoTitleBar"
+    			  android:screenOrientation="portrait" />
+    			  
+    	<service android:name=".MediaPlayerService"
+        	android:process=":remote" />
+        	
+        <service android:name=".SocialTunesAppWidgetService" />
+        	
+        <receiver android:name=".SocialTunesAppWidget" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="sg.ruqqq.socialtunes.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+		</receiver>
+	</application>
+	
+    <uses-sdk android:minSdkVersion="4" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+</manifest> 
